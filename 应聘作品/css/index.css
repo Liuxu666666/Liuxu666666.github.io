@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.zise{
+    color:mediumpurple!important;
+}
+
+
+#zhubeijing1{
+    background: url('../imgs/zhubeijing1.jpg') no-repeat 0 0;
+    background-size:cover;
+}
+
+#zhubeijing1 .jiyu-box{
+    width:210px;
+    height:70px;
+    /*border:1px solid red;*/
+    border-radius: 5px;
+    color:white;
+    background: rgba(0,0,0,0.4);
+}
+
+#zhubeijing1 .jiyu-box h1{
+    font-size:50px;
+    text-align: center;
+    line-height: 70px;
+    letter-spacing: 20px;
+    font-family:'Hakuu130b5c84b11d68d';
+}
+
+#zhubeijing1 .zhezhao{
+    height:290px;
+    background: rgba(0,0,0,0.4);
+}
+
+#zhubeijing1 .head{
+    width:120%;
+}
+
+#zhubeijing1 .neirong h2,p{
+    color:white;
+}
+
+#zhubeijing1 .tianchong{
+    height:190px;
+}
+
+#xuyuanqiang .title{
+    height:80px;
+    border-bottom:1px solid #e5d8db;
+}
+
+#xuyuanqiang .title h1{
+    line-height:80px;
+    letter-spacing: 2px;
+}
+
+#xuyuanqiang .title .xiahuaxian{
+    border-bottom: 2px solid mediumpurple;
+}
+
+#xuyuanqiang .zhuti-box{
+    background-color:black;
+    border-radius: 5px;
+}
+
+#xuyuanqiang .zhuti{
+    width:860px;
+    perspective:800px;
+    /*perspective为景深*/
+}
+
+#xuyuanqiang .zhuti img{
+    width:9%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#xuyuanqiang .xuyuan{
+    width:100%;
+    font-family:'hdjlaosong1313fbb1701d68d';
+    font-size: 30px;
+    letter-spacing: 6px;
+}
+
+#meishilunbo .title{
+    height:80px;
+    border-bottom:1px solid #e5d8db;
+}
+
+#meishilunbo .title h1{
+    line-height:80px;
+    letter-spacing: 2px;
+}
+
+#meishilunbo .title .xiahuaxian{
+    border-bottom: 2px solid mediumpurple;
+}
+
+
+
+
+#meishilunbo .poster-main{
+    position: relative;
+}
+
+#meishilunbo .prev-btn{
+    color:rgba(255,255,255,0.5);
+    text-decoration: none;
+    margin-left: -30px;
+}
+
+#meishilunbo .prev-btn:hover{
+    color:rgba(255,255,255,1);
+}
+
+#meishilunbo .next-btn{
+    color:rgba(255,255,255,0.5);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#meishilunbo .next-btn:hover{
+    color:rgba(255,255,255,1);
+}
+
+#meishilunbo .poster-item{
+    border: 15px solid #ffffc6;
+    padding: 0 0;
+}
