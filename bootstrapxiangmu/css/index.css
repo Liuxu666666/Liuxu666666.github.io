@@ -1,0 +1,265 @@
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:black;
+}
+
+
+@font-face {
+    font-family:lx;
+    src: url('../fonts/lx.eot') format('embedded-opentype'),
+    url('../fonts/lx.svg') format('svg'),
+    url('../fonts/lx.ttf') format('truetype'),
+    url('../fonts/lx.woff') format('woff');
+}
+
+[class*=ic-]{
+     font-family:lx;
+    font-style: normal;
+}
+
+
+.ic-phone::before{
+      content:"\e958";
+    font-size: 16px;
+}
+
+.ic-tel::before{
+    content: "\e942";
+    font-size: 16px;
+}
+
+#xiaoxu-aboutus,#xiaoxu-hot,#xiaoxu-link{
+    padding:20px 0px;
+}
+
+#xiaoxu-aboutus .title,#xiaoxu-hot .title,#xiaoxu-link .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+/*************************头部样式开始************************/
+#xiaoxu-header{
+
+}
+
+#xiaoxu-header #top-bar{
+    height:40px;
+    border-bottom: 1px solid lightgray;
+    line-height: 39px;
+}
+
+#xiaoxu-header #top-bar .container .row>div+div{
+    border-left: 1px solid lightgray;
+}
+
+#xiaoxu-header #top-bar .container .row .top-bar-1 a{
+    position: relative;
+    text-decoration: none;
+}
+
+#xiaoxu-header #top-bar .container .row .top-bar-1 a img{
+    display: none;
+    position: absolute;
+    top:20px;
+    left:50%;
+    margin-left: -65px;
+    z-index: 99999;
+    width:130px;
+}
+
+#xiaoxu-header #top-bar .container .row .top-bar-1 a:hover img{
+    display: block;
+}
+
+
+#xiaoxu-header .navbar-lk{
+         background: white;
+}
+
+#xiaoxu-header .navbar{
+    margin-bottom: 1px;
+}
+
+#xiaoxu-header .navbar-static-top{
+    border-width:1px;
+}
+
+#xiaoxu-header .navbar-lk .navbar-brand{
+    height:70px;
+    padding:10px 0;
+}
+
+#xiaoxu-header .navbar-lk .navbar-nav li a{
+        height:70px;
+        line-height: 40px;
+}
+
+#xiaoxu-header .navbar-lk .navbar-nav .active a,
+#xiaoxu-header .navbar-lk .navbar-nav li a:hover{
+    background-color: white;
+    border-bottom:2px solid #44f8ff;
+}
+
+#xiaoxu-header .navbar-lk .navbar-toggle{
+    margin-top: 20px;
+}
+
+/*************************头部样式结束************************/
+
+/********************轮播图样式开始***********************/
+#xiaoxu-lunbo{
+
+}
+
+#xiaoxu-lunbo .item{
+
+             background: no-repeat center center;
+             background-size: cover;
+    -webkit-background-size: cover;
+}
+
+@media screen and (min-width: 640px){
+    #xiaoxu-lunbo .item{
+        height: 410px;
+    }
+}
+/********************轮播图样式结束***********************/
+
+/********************关于我们样式开始***********************/
+#xiaoxu-aboutus .row p{
+    line-height: 28px;
+    font-size:18px;
+}
+
+/********************关于我们样式结束***********************/
+
+/*********************产品特色选项卡样式开始************************/
+#xiaoxu-product{
+    background-color: #eef1e5;
+    padding:30px 0px;
+}
+
+#xiaoxu-product .nav{
+    font-size: 18px;
+}
+
+#xiaoxu-product .nav a{
+    color:#999999;
+}
+
+#xiaoxu-product .nav li.active a{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #44f8ff;
+    color:#000;
+}
+
+
+#xiaoxu-product .tab-content{
+          padding-top: 20px;
+}
+
+#xiaoxu-product .tab-content .pd-words{
+       padding: 40px 0px;
+}
+
+#pd-one-1{
+    margin: 15px 0px;
+}
+
+#pd-one-2{
+    background-color:transparent;
+}
+
+#pd-two-2{
+    padding:140px 0px!important;
+}
+
+#pd-two-2 h1{
+    margin-bottom: 20px!important;
+}
+/*********************产品特色选项卡样式结束************************/
+
+/*************************热门课程样式开始******************************/
+#xiaoxu-hot .lesson{
+    padding:15px 10px;
+}
+
+#xiaoxu-hot .lesson .media-left{
+    width:20%;
+}
+
+#xiaoxu-hot .lesson .media-body{
+    width:60%;
+    vertical-align:middle;
+    /*意为垂直方向居中*/
+}
+
+#xiaoxu-hot .lesson .media-right{
+    width:20%;
+    font-size: 16px;
+    vertical-align: middle;
+}
+/*************************热门课程样式结束******************************/
+
+/*********************************友情链接样式开始****************************/
+
+#xiaoxu-link .logos{
+    list-style: none;
+    text-align: center;
+}
+
+#xiaoxu-link .logos li{
+    display: inline-block;
+    padding:20px 30px;
+}
+/*********************************友情链接样式结束****************************/
+
+/******************************尾部样式开始*****************************/
+#xiaoxu-foot{
+    background: url("../images/ft_bg.png") no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    color:white;
+    font-size: 16px;
+}
+
+#xiaoxu-foot ul{
+    list-style: none;
+}
+
+#xiaoxu-foot .one,#xiaoxu-foot .two{
+    padding:10px;
+     border-right: 1px solid #666;
+    height:160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#xiaoxu-foot .one li{
+    line-height: 40px;
+}
+
+#xiaoxu-foot .one li a{
+    color:white;
+    text-decoration: none;
+}
+
+#xiaoxu-foot .three{
+    padding:10px;
+    height:160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#xiaoxu-foot .three img{
+     margin:20px 50px 0px 10px;
+}
+/******************************尾部样式结束*****************************/
