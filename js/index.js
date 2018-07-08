@@ -1,5 +1,27 @@
 $(function (){
 
+    //预加载事件
+
+    var count=0
+    //加载完成了多少张图片
+
+    $.each($('img'),function(i,ele){
+              console.log($(ele).attr('src'))
+        var imgobj=new Image()
+
+        $(imgobj).on('load',function(){
+            count++
+            $('.progress1').html(Math.round((count+1)/$('img').length*100)+'%')
+            if(count>=$('img').length-1){
+                $('#loading').hide()
+            }
+        })
+
+        imgobj.src=$(ele).attr('src')
+
+    })
+
+    //预加载事件完
 
 //许愿星事件*******************************************************************************
 
