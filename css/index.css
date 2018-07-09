@@ -4,8 +4,15 @@
 }
 
 @font-face {
-    font-family:'hakuu';
-    src: url('../font/hakuu.ttf') format('truetype');
+    font-family: "hakuu";
+    src: url("../font/new%20font/hakuu.eot"); /* IE9 */
+    src: url("../font/new%20font/hakuu.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../font/new%20font/hakuu.woff") format("woff"), /* chrome, firefox */
+    url("../font/new%20font/hakuu.woff2") format("woff2"),
+    url("../font/new%20font/hakuu.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("../font/new%20font/hakuu.svg") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
 }
 
 .zise{
@@ -81,6 +88,7 @@ img{
     overflow: hidden;
     position: relative;
     perspective: 400px;
+    cursor: pointer;
 }
 
 #gerenjieshao .rongqi>p{
@@ -98,9 +106,9 @@ img{
     transition: all 1s;
 }
 
-#gerenjieshao .rongqi:hover .text{
-    transform: rotateX(0deg);
-}
+/*#gerenjieshao .rongqi:hover .text{*/
+    /*transform: rotateX(0deg);*/
+/*}*/
 
 #gerenjieshao .rongqi .text p{
     color: #ffffff;
