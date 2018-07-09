@@ -8,38 +8,19 @@
     src: url('../font/hakuu.ttf') format('truetype');
 }
 
-html,body{
-    height:100%;
-}
-
-/*预加载页面*/
-#loading{
-    position: fixed;
-    top:0;
-    left: 0;
-    width:100%;
-    height:100%;
-    background: #EEEEEE;
-    text-align: center;
-    font-size: 30px;
-}
-
-#loading .progress1{
-    margin-top: 300px;
-    color:#666;
-}
-
-
-/*预加载页面结束*/
-
 .zise{
     color:mediumpurple!important;
+}
+
+img{
+    width:100%;
 }
 
 
 #zhubeijing1{
     background: url('../imgs/zhubeijing1.jpg') no-repeat 0 0;
     background-size:cover;
+    padding-bottom: 75px;
 }
 
 #zhubeijing1 .jiyu-box{
@@ -76,87 +57,93 @@ html,body{
     height:190px;
 }
 
-#xuyuanqiang .title{
+#gerenjieshao .title{
     height:80px;
     border-bottom:1px solid #e5d8db;
 }
 
-#xuyuanqiang .title h1{
+#gerenjieshao .title h1{
     line-height:80px;
     letter-spacing: 2px;
 }
 
-#xuyuanqiang .title .xiahuaxian{
-    border-bottom: 2px solid mediumpurple;
-}
-
-#xuyuanqiang .zhuti-box{
-    background-color:black;
-    border-radius: 5px;
-}
-
-#xuyuanqiang .zhuti{
-    width:860px;
-    perspective:800px;
-    /*perspective为景深*/
-}
-
-#xuyuanqiang .zhuti img{
-    width:9%;
-    height:17%;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-
-#xuyuanqiang .xuyuan{
-    width:120%;
-    font-family:'hakuu';
-    font-size: 30px;
-    letter-spacing: 6px;
-}
-
-
-#meishilunbo .title{
-    height:80px;
-    border-bottom:1px solid #e5d8db;
-}
-
-#meishilunbo .title h1{
-    line-height:80px;
-    letter-spacing: 2px;
-}
-
-#meishilunbo .title .xiahuaxian{
+#gerenjieshao .title .xiahuaxian{
     border-bottom: 2px solid mediumpurple;
 }
 
 
-
-
-#meishilunbo .poster-main{
+#gerenjieshao .rongqi{
+    padding-bottom:2%;
+    background-color: white;
+    margin-bottom: 20%;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
     position: relative;
+    perspective: 400px;
 }
 
-#meishilunbo .prev-btn{
-    color:rgba(255,255,255,0.5);
-    text-decoration: none;
-    margin-left: -40px;
+#gerenjieshao .rongqi>p{
+    font-family: 'hakuu';
 }
 
-#meishilunbo .prev-btn:hover{
-    color:rgba(255,255,255,1);
+#gerenjieshao .rongqi .text{
+    position: absolute;
+    left:0;
+    top:0;
+    background: rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    transform: rotateX(90deg);
+    transition: all 1s;
 }
 
-#meishilunbo .next-btn{
-    color:rgba(255,255,255,0.5);
-    text-decoration: none;
+#gerenjieshao .rongqi:hover .text{
+    transform: rotateX(0deg);
 }
 
-#meishilunbo .next-btn:hover{
-    color:rgba(255,255,255,1);
+#gerenjieshao .rongqi .text p{
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 25px;
 }
 
-#meishilunbo .poster-item{
-    border: 15px solid #ffffc6;
-    padding: 0 0;
+
+#jineng .title{
+    height:80px;
+    border-bottom:1px solid #e5d8db;
 }
+
+#jineng .title h1{
+    line-height:80px;
+    letter-spacing: 2px;
+}
+
+#jineng .title .xiahuaxian{
+    border-bottom: 2px solid mediumpurple;
+}
+
+
+
+
+
+
+
+#jingse .title{
+    height:80px;
+    border-bottom:1px solid #e5d8db;
+}
+
+#jingse .title h1{
+    line-height:80px;
+    letter-spacing: 2px;
+}
+
+#jingse .title .xiahuaxian{
+    border-bottom: 2px solid mediumpurple;
+}
+
+
+
