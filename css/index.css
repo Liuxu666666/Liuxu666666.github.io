@@ -133,9 +133,10 @@ img{
     border-bottom: 2px solid mediumpurple;
 }
 
-
-
-
+#jineng .zhuti p{
+    color:#444;
+    font-size:25px;
+}
 
 
 
@@ -145,6 +146,7 @@ img{
 }
 
 #jingse .title h1{
+    font-weight: 600;
     line-height:80px;
     letter-spacing: 2px;
 }
@@ -153,5 +155,25 @@ img{
     border-bottom: 2px solid mediumpurple;
 }
 
+#jingse .zhuti{
+    position: relative;
+}
 
+
+#jingse .zhuti .box{
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 8px;
+}
+
+#jingse .zhuti .pic{
+    padding:3%;
+    border:1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+#jingse .zhuti .pic img{
+    border-radius: 6px;
+}
 
