@@ -80,12 +80,12 @@ $(function (){
 
                var oPic=$('<div>').addClass('pic').appendTo($(oBox))
 
-               var oA=$('<a>').addClass('lightbox').attr('data-galpop-group','multiple').attr('href',$(obj).prop('src')).appendTo($(oPic))
+               var oA=$('<a>').attr('href',$(obj).prop('src')).appendTo($(oPic))
 
                $('<img>').attr('src',$(obj).prop('src')).appendTo($(oA))
 
                //景色放大插件初始
-               $('.lightbox').galpop();
+               baguetteBox.run('.lightbox');
            })
 
        })
@@ -93,7 +93,7 @@ $(function (){
 
     //景色放大插件的初始
 
-    $('.lightbox').galpop();
+    baguetteBox.run('.lightbox');
 
 
 
