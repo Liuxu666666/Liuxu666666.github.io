@@ -54,83 +54,48 @@ $(function (){
 
 
 
-    //瀑布流事件
+    //景色事件
 
-    waterfall()
-
-    var dataInt={"data":[{"src":"./imgs/jingse/0.jpg"},
-        {"src":"./imgs/jingse/1.jpg"},
-        {"src":"./imgs/jingse/2.jpg"},
-        {"src":"./imgs/jingse/3.jpg"},
-        {"src":"./imgs/jingse/4.jpg"},
-        {"src":"./imgs/jingse/5.jpg"}
+    var dataInt={"data":[{"src":"./images/jingse/0.jpg"},
+        {"src":"./images/jingse/1.jpg"},
+        {"src":"./images/jingse/2.jpg"},
+        {"src":"./images/jingse/3.jpg"},
+        {"src":"./images/jingse/4.jpg"},
+        {"src":"./images/jingse/5.jpg"},
+        {"src":"./images/jingse/6.jpg"},
+        {"src":"./images/jingse/7.jpg"},
+        {"src":"./images/jingse/8.jpg"},
+        {"src":"./images/jingse/9.jpg"},
+        {"src":"./images/jingse/10.jpg"},
+        {"src":"./images/jingse/11.jpg"}
     ]}
 
-    $(window).on('scroll',function(){
-          console.log(checkScrollSlide())
-           if(checkScrollSlide()){
-               $.each(dataInt.data,function(i,obj){
-
-                   var oBox=$('<div>').addClass('box col-4 col-md-3 col-xl-2 pb-3').appendTo($('#jingse .zhuti'))
-
-                   var oPic=$('<div>').addClass('pic').appendTo($(oBox))
-
-                   $('<img>').attr('src',$(obj).prop('src')).appendTo($(oPic))
-               })
-
-               waterfall()
-           }
-    })
-
-    function waterfall(){
-
-        var $boxs=$('#jingse .zhuti .box')
-
-        var w=$boxs.eq(0).outerWidth()
-        //outerWidth获得的宽度包含元素的内边距和边框
-
-        var cols=Math.ceil($('#jingse>div').width()/w)
 
 
-        var hArr=[]
+       $('#jingse button').on('click',function(){
 
-        $.each($boxs,function(index,box){
+           $.each(dataInt.data,function(i,obj){
 
-            var h=$(box).children('.pic').outerHeight()
+               var oBox=$('<div>').addClass('box col-4 col-md-3 col-xl-2 pb-3').appendTo($('#jingse .zhuti'))
 
-            if(index<cols){
-                hArr.push(h)
-            }else{
-                var minH=Math.min.apply(null,hArr)
+               var oPic=$('<div>').addClass('pic').appendTo($(oBox))
 
-                var minHIndex=$.inArray(minH,hArr)
+               var oA=$('<a>').addClass('lightbox').attr('data-galpop-group','multiple').attr('href',$(obj).prop('src')).appendTo($(oPic))
 
-                $(box).css({
-                    position:'absolute',
-                    top:minH+12+'px',
-                    left:minHIndex*w+'px'
-                })
+               $('<img>').attr('src',$(obj).prop('src')).appendTo($(oA))
 
-                hArr[minHIndex]+=($(box).children('.pic').outerHeight()+12)
-            }
-        })
-    }
+               //景色放大插件初始
+               $('.lightbox').galpop();
+           })
+
+       })
 
 
-    function checkScrollSlide(){
+    //景色放大插件的初始
 
-            var $lastBox=$('#jingse .zhuti .box').last()
-
-            var lastBoxDis=$lastBox.offset().top
-
-            var scrollTop=$(window).scrollTop()
-
-            var documentH=$(window).height()
-
-            return (lastBoxDis<scrollTop+documentH)?true:false
+    $('.lightbox').galpop();
 
 
-    }
 
 
 

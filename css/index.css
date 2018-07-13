@@ -136,7 +136,9 @@ img{
     font-size:25px;
 }
 
-
+#jingse{
+    background-color: #d2fff6;
+}
 
 #jingse .title{
     height:80px;
@@ -151,10 +153,6 @@ img{
 
 #jingse .title .xiahuaxian{
     border-bottom: 2px solid mediumpurple;
-}
-
-#jingse .zhuti{
-    position: relative;
 }
 
 
@@ -173,5 +171,11 @@ img{
 
 #jingse .zhuti .pic img{
     border-radius: 6px;
+}
+
+#jingse button{
+    letter-spacing: 7px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
