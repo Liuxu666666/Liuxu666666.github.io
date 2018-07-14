@@ -179,3 +179,10 @@ img{
     font-weight: 600;
 }
 
+#loading .progress-bar{
+    width:0;
+    font-size: 30px;
+    background-color: #fffa4b;
+    font-weight: bold;
+}
+

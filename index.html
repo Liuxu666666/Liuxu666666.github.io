@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="https://ico.z01.com/zico.min.css">
     <link rel="stylesheet" href="./css/baguetteBox.min.css">
     <link rel="stylesheet" href="./css/index.css">
-    <style>
-        /*去除广告*/
-        iframe[id^="head__"] { display: none !important; }
-        iframe[id^="utp__"] { display: none !important; }
-        iframe[src*="ucweb.com"] { display: none !important; }
-    </style>
 </head>
 <body>
 
@@ -51,7 +45,7 @@
                   <div class="title row mt-5">
                       <div class="xiahuaxian">
                       <h1><span class="zise">一路</span>的点滴</h1>
-                          <p class="text-muted">下面的卡片记录了我在生活、工作中的一些点滴过程，点击卡片可详细观看 . . . . .</p>
+                          <p class="text-muted">下面的卡片记录了我在生活、工作中的一些点滴过程，点击卡片可查看详情 . . . . .</p>
                       </div>
                   </div>
                   <div class="zhanwei row mt-5"></div>
@@ -151,7 +145,7 @@
                                       <p class="text-muted">了 解 更 多</p>
                                       <div class="text justify-content-center flex-column d-flex p-xl-3 p-4">
                                           <p class="mt-2">
-                                              时间飞逝，转眼间距离我正式在前端岗位(主要负责页面布局和交互效果的编写)的时间也有一年了，未来的路还有很长，感谢我的启蒙老师周姐，以后我会不断磨炼自己，成为一名顶尖的前端工程师。
+                                              时间飞逝，转眼间距离我正式在前端岗位的时间也有一年了，未来的路还有很长，感谢我的启蒙老师周姐，以后我会不断磨炼自己，成为一名顶尖的前端工程师。
                                           </p>
                                       </div>
                                   </div>
@@ -257,7 +251,7 @@
                   <div class="title row mt-4">
                       <div class="xiahuaxian">
                           <h1><span class="zise">喜欢</span>的景色</h1>
-                          <p class="text-muted">最后，跟随我的脚步，领略一下各地风光的魅力吧，点击可以欣赏大图哦 ~ ~ ~</p>
+                          <p class="text-muted">最后，跟随我的脚步，领略一下各地风光的魅力吧，点击图片可以欣赏大图哦 ~ ~ ~</p>
                       </div>
                   </div>
 
@@ -365,17 +359,34 @@
           <div id="footer" class="row">
               <div class="container-fluid">
                   <div class="row" style="position: relative;background-color:#7fffff">
-                          <img src="images/footer.gif" style="width: 100%;height:30%;border: none;object-fit:fill;opacity: 0.5;">
-                          <h1 style="position: absolute;text-align:center;width:100%;top:40%;color:white;font-weight:bold;letter-spacing:4vw;font-size:6vw;">谢谢观看</h1>
-                          <h1 style="position: absolute;text-align:center;width:100%;top:60%;color:white;font-weight:bold;letter-spacing:4vw;font-size:6vw;">后会有期</h1>
+                          <img  src="images/footer.gif" style="width: 100%;height:100%;border: none;object-fit:fill;opacity: 0.5;">
+                          <h1 style="position: absolute;text-align:center;width:100%;top:40%;color:#00fff9;font-weight:bold;letter-spacing:4vw;font-size:6vw;">谢谢观看</h1>
+                          <h1 style="position: absolute;text-align:center;width:100%;top:60%;color:#00ffff;font-weight:bold;letter-spacing:4vw;font-size:6vw;">后会有期</h1>
                   </div>
               </div>
           </div>
       </div>
+
+       <div id="loading" class="container-fluid" style="position:fixed;top:0;left: 0;width:100%;height:100%;background-color: #00fbf6;">
+             <div class="row" style="padding-top:17rem;">
+                 <div class="col-1"></div>
+                 <div class="col-10">
+                     <div class="progress" style="height:35px">
+                         <div class="progress-bar progress-bar-striped progress-bar-animated">0%</div>
+                     </div>
+                 </div>
+                 <div class="col-1"></div>
+                 <div class="col-1"></div>
+                 <p class="col-10 mt-3" style="font-size:7vw;color:white;font-weight:600;">加载中，请稍等 . . . . .</p>
+             </div>
+       </div>
+
+
       <script src="//code.z01.com/jquery/jquery-3.2.1.min.js" ></script>
       <script src="//code.z01.com/v4/dist/js/popper.min.js"></script>
       <script src="//code.z01.com/v4/dist/js/bootstrap.min.js" ></script>
       <script src="js/baguetteBox.min.js"></script>
+      <script src="js/loading.js"></script>
       <script src="./js/index.js"></script>
 </body>
 </html>

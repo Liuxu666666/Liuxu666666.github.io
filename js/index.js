@@ -1,5 +1,47 @@
 $(function (){
 
+
+//预加载事件
+
+   var imgs=[
+       './images/zhubeijing1.jpg',
+       './images/head.jpg',
+       './images/card/card1.jpg',
+       './images/card/card2.jpg',
+       './images/card/card3.jpg',
+       './images/card/card4.jpg',
+       './images/card/card5.jpg',
+       './images/card/card6.jpg',
+       './images/card/card7.jpg',
+       './images/card/card8.jpg',
+       './images/jingse/0.jpg',
+       './images/jingse/1.jpg',
+       './images/jingse/2.jpg',
+       './images/jingse/3.jpg',
+       './images/jingse/4.jpg',
+       './images/jingse/5.jpg',
+       './images/jingse/6.jpg',
+       './images/jingse/7.jpg',
+       './images/jingse/8.jpg',
+       './images/jingse/9.jpg',
+       './images/jingse/10.jpg',
+       './images/jingse/11.jpg',
+       './images/footer.gif'
+   ]
+
+
+     $.xiaoxuload(imgs,{
+         each:function(count,len){
+             $('#loading .progress-bar').html(Math.ceil(count/len*100)+'%').css('width',Math.ceil(count/len*100)+'%')
+         },
+         all:function(){
+              $('#loading').hide()
+         }
+     })
+
+
+
+
 //卡片事件
 
     var key=true
