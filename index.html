@@ -372,9 +372,10 @@
       <script src="js/baguetteBox.min.js"></script>
       <script src="./js/index.js"></script>
       <script>
-          document.ontouchstart=function(){
-              return false;
-          }
+          document.addEventListener("touchmove",function(e){
+                  e.preventDefault();
+                  e.stopPropagation();
+          },false);
       </script>
 </body>
 </html>
