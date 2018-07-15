@@ -30,7 +30,7 @@
 
             imgObj.src=src
 
-            $(imgObj).on('load',function(){
+            $(imgObj).on('load error',function(){
                     count++
                          opt.each && opt.each(count,len)
                 if(count==len){
