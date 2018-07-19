@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+    
+// 通过临时存储(sessionStorage)来判断根据屏幕宽度变化来加载 移动端页面 / PC端页面
+ 
+var indexUrl = "https://www.taobao.com";   //PC端
+var indexMobileUrl = "https://www.baidu.com"; //移动端
+ 
+var newState = 0;    //记录当前是大屏幕(1)还是小屏幕 (0)
+resizeUnit();   //初始化加载页面
+ 
+//浏览器窗口变化时也要初始化加载页面
+window.onresize = function(){
+    resizeUnit();
+}
+ 
+/**
+ * 刷新页面时加载对应的页面
+ * @param {Object} width    加载不同页面的分界点(屏幕宽度),默认不传参就是768
+ */
+function resizeUnit(width){
+    var width = width || 768;
+    var windowWidth = window.innerWidth; //获取可视窗口大小
+    //var windowWidth = window.screen.width;
+    // 判断窗口大小  以传入的宽度为分界点
+    if(windowWidth<width){
+        newState = 0;
+    }else {
+        newState = 1;
+    }
+    //判断sessionStorage是否存在 "oldState"
+    if(sessionStorage.getItem('oldState')){
+        //刷新后sessionStorage已保存有刷新前的状态，则获取该值，与当前状态值进行对比
+        var oldState = sessionStorage.getItem('oldState');
+        if(newState!=oldState){
+            sessionStorage.setItem('oldState', newState);  // 重置为当前状态值
+            getHtml(newState);  // 跳转到相应的html页面
+        }
+    }else{
+        //保存刷新前的状态数据到sessionStorage
+        sessionStorage.setItem('oldState', newState);  //初始化的时候设置
+        getHtml(newState);
+    }
+}
+ 
+/**
+ * 根据状态跳转相应的html页面
+ * @param {Object} state    当前屏幕宽度的状态 （1为大屏幕，0为小屏幕）
+ */
+function getHtml(state) {   
+    if(state==1){ 
+        window.location.replace(indexUrl);
+    }else if(state==0){ 
+        window.location.replace(indexMobileUrl);
+    }
+};
+
+
+</script>
+</body>
+</html>
